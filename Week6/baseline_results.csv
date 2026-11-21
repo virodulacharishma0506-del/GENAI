@@ -1,0 +1,138 @@
+﻿Question_ID,Question,Expected_Answer,LLM_Answer,Matched_Keywords,Missing_Keywords,Score,Status,Source,Model,Release
+Q001,What is tokenization in NLP?,Tokenization is the process of splitting text into smaller units called tokens.,"Tokenization is a fundamental concept in Natural Language Processing (NLP) that involves breaking down text into individual units called tokens. Tokens can be words, characters, or subwords (smaller units within words).
+
+In NLP, tokenization is the process of splitting text into these individual units, which can then be analyzed, processed, and used for various tasks such as:
+
+1. Text classification: Tokenization helps to identify the individual words or phrases that will be used to train machine learning models for","tokenization, text, tokens",,100.0,PASS,NLP Fundamentals,llama3.2,v0.1
+Q002,What is a token?,"A token is a unit of text such as a word, subword, or character.","A token can refer to different things depending on the context. Here are a few possible meanings:
+
+1. **Digital token**: In the context of blockchain, cryptocurrency, or digital wallets, a token is a digital asset that represents a unit of exchange or a specific value. Examples include cryptocurrencies like Ethereum or Bitcoin, as well as tokens used for specific purposes, such as gaming or social media.
+2. **Physical token**: A physical token can be a physical object that represents a value, privilege, or",token,"word, subword, character",25.0,REVIEW,NLP Fundamentals,llama3.2,v0.1
+Q003,What is Byte Pair Encoding?,BPE is a subword tokenization algorithm that repeatedly merges frequent pairs of symbols.,"Byte Pair Encoding (BPE) is a popular algorithm used in natural language processing (NLP) and machine learning, particularly in text compression and tokenization. It's a technique for reducing the dimensionality of text data by replacing sequences of characters with a single character or a short sequence of characters.
+
+The BPE algorithm works by iteratively merging the most common pairs of characters in the text data. Here's a step-by-step explanation:
+
+1. **Initialization**: The algorithm starts with a vocabulary of",BPE,"subword, merges, frequent",25.0,REVIEW,BPE Documentation,llama3.2,v0.1
+Q004,What is WordPiece tokenization?,WordPiece is a subword tokenization method used in models such as BERT.,"WordPiece tokenization is a type of subword tokenization used in natural language processing (NLP) tasks, particularly in the context of transformer-based models. It was introduced by Google in 2017 as a way to improve the efficiency and effectiveness of NLP models.
+
+In traditional tokenization, words are split into individual tokens, such as words or subwords, based on a fixed vocabulary. However, this approach can be limiting, especially when dealing with out-of-vocabulary (OOV)","WordPiece, subword",BERT,66.67,PASS,BERT Documentation,llama3.2,v0.1
+Q005,What is SentencePiece?,SentencePiece is a tokenizer that can train directly on raw sentences without requiring pre-tokenized words.,"SentencePiece is an open-source library used for training and fine-tuning language models, particularly those based on the Transformer architecture. It was developed by Google and is widely used in the field of natural language processing (NLP).
+
+SentencePiece is designed to handle the task of tokenization, which is the process of breaking down text into individual words or tokens. However, unlike traditional tokenization methods, SentencePiece uses a different approach to handle out-of-vocabulary (OOV) words and subwording",SentencePiece,"tokenizer, raw, sentences",25.0,REVIEW,SentencePiece Documentation,llama3.2,v0.1
+Q006,How does tokenization work for Telugu and English?,Different languages may produce different token counts because tokenization depends on vocabulary and text patterns.,"Tokenization is the process of breaking down text into individual tokens, which can be words, subwords, or even characters. Tokenization is an important step in natural language processing (NLP) and is used in various applications such as text analysis, sentiment analysis, and language modeling.
+
+Tokenization for Telugu and English works similarly, but there are some differences due to the unique characteristics of each language.
+
+**English Tokenization:**
+
+In English, tokenization typically involves the following steps:
+
+1.","Telugu, English, token",languages,75.0,PASS,Multilingual NLP,llama3.2,v0.1
+Q007,What is token ratio?,Token ratio compares the number of tokens with the number of words or characters.,"Token ratio, also known as token allocation ratio, is a financial metric used to evaluate the distribution of a company's shares among its shareholders. It represents the proportion of shares held by each class of shareholder, such as shareholders, employees, or directors.
+
+The token ratio is typically calculated by dividing the number of shares held by each class of shareholder by the total number of shares outstanding. For example, if a company has 1 million shares outstanding and 200,000 shares are held by shareholders, the",token ratio,"tokens, words",33.33,REVIEW,Token Economics,llama3.2,v0.1
+Q008,What are input tokens?,Input tokens are the tokens sent to a language model as a prompt.,"Input tokens are a fundamental concept in natural language processing (NLP) and machine learning. They are a way to represent and manipulate text data in a structured and efficient manner.
+
+In NLP, input tokens refer to the individual units of text that are used as input to a model or algorithm. These tokens can be words, characters, or even subwords (smaller units of words).
+
+Here are some common types of input tokens:
+
+1. **Word tokens**: These are individual words, such as",input tokens,"language model, prompt",33.33,REVIEW,LLM Fundamentals,llama3.2,v0.1
+Q009,What are output tokens?,Output tokens are the tokens generated by a language model in its response.,"Output tokens are a type of token that is used in natural language processing (NLP) and machine learning (ML) models, particularly in sequence-to-sequence models such as machine translation, text summarization, and chatbots.
+
+In a sequence-to-sequence model, the input is a sequence of tokens (e.g., words or subwords) and the output is also a sequence of tokens. The output tokens are the predicted tokens that the model thinks should be in the output sequence.
+
+Output tokens",output tokens,"generated, response",33.33,REVIEW,LLM Fundamentals,llama3.2,v0.1
+Q010,How is API token cost calculated?,API token cost is calculated using input and output token counts and their respective prices.,"The cost of an API token can be calculated in various ways, depending on the provider and the specific plan or pricing model. Here are some common methods:
+
+1. **Per-Request Pricing**: Some providers charge a fee for each API request made, with the cost typically ranging from $0.01 to $10 per request, depending on the volume and type of requests.
+2. **Per-User Pricing**: Some providers charge a flat fee per user, with the cost typically ranging from $10","API, token, cost","input, output",60.0,PASS,API Pricing Concepts,llama3.2,v0.1
+Q011,What is a context window?,A context window is the maximum number of tokens a model can process in one interaction.,"A context window is a region of a user interface where the user can view and interact with a specific piece of content, such as a web page, email, or chat message. It is typically a rectangular area that contains the content and allows the user to scroll, zoom, and manipulate the content as needed.
+
+In the context of web development, a context window is often used to display a specific page or section of a website, allowing the user to focus on a particular piece of content without being distracted",context window,"maximum, tokens, model",25.0,REVIEW,LLM Fundamentals,llama3.2,v0.1
+Q012,What is a rate limit?,A rate limit restricts the number of requests or tokens allowed within a time period.,"A rate limit is a mechanism used to control the frequency of requests or actions made to a system, service, or API. It's a way to prevent abuse, ensure fairness, and maintain the overall performance and stability of the system.
+
+Rate limits typically involve setting a threshold for the number of requests or actions that can be made within a certain time period. For example, a rate limit might allow 100 requests per minute, or 1000 requests per hour.
+
+Rate limits can be used for various","rate limit, requests, time",tokens,75.0,PASS,API Documentation,llama3.2,v0.1
+Q013,Why is token monitoring important?,"Token monitoring helps control usage, cost, and model resource consumption.","Token monitoring is important for several reasons:
+
+1. **Security**: Token monitoring helps detect and prevent unauthorized access to sensitive data, systems, or applications. By tracking tokens, administrators can identify potential security breaches and take prompt action to mitigate the damage.
+2. **Compliance**: Token monitoring is essential for ensuring compliance with regulatory requirements, such as GDPR, HIPAA, and PCI-DSS. By monitoring tokens, organizations can demonstrate their adherence to these regulations and avoid potential fines or penalties.
+3. **",token monitoring,"usage, cost",33.33,REVIEW,Token Monitoring,llama3.2,v0.1
+Q014,What is autoregressive generation?,Autoregressive generation predicts the next token using previously generated tokens.,"Autoregressive (AR) generation is a type of generative model that uses past observations to predict future values. It is a fundamental concept in time series forecasting and has been widely used in various applications, including speech synthesis, music generation, and image synthesis.
+
+In an autoregressive model, the current output is a function of past outputs. The model takes the current input and uses it to predict the next value in the sequence. The prediction is based on the assumption that the current value is a",autoregressive,"next token, previously",33.33,REVIEW,Language Model Concepts,llama3.2,v0.1
+Q015,What is next-token prediction?,Next-token prediction estimates the most likely next token based on previous context.,"Next-token prediction is a type of sequence prediction task in natural language processing (NLP) and machine learning. It involves predicting the next token in a sequence of tokens, given the context of the previous tokens.
+
+In other words, given a sequence of words, the goal is to predict the next word that should come after the previous word. This can be a simple task, but it can also be challenging, especially when dealing with long sequences or complex linguistic structures.
+
+Next-token prediction is often used as","next-token, prediction, context",,100.0,PASS,Language Model Concepts,llama3.2,v0.1
+Q016,What is a probability distribution in language models?,It assigns probabilities to possible next tokens.,"In language models, a probability distribution refers to the way in which the model assigns probabilities to different possible outcomes or tokens in a given input sequence. The probability distribution is a mathematical function that maps each input token to a probability value between 0 and 1, where 1 represents a certain outcome and 0 represents an impossible outcome.
+
+In the context of language models, the probability distribution is typically represented as a probability mass function (PMF) or a probability density function (PDF), which assigns a","probability, distribution, tokens",,100.0,PASS,Probability in NLP,llama3.2,v0.1
+Q017,What is greedy decoding?,Greedy decoding selects the token with the highest probability at each step.,"Greedy decoding is a technique used in coding theory to decode a received signal or message. It is a simple and efficient method for correcting errors in digital communication systems.
+
+In greedy decoding, the decoder starts by identifying the most likely error pattern in the received signal. It then selects the correction that minimizes the total number of errors, and repeats this process until all errors have been corrected.
+
+The greedy decoding algorithm works as follows:
+
+1. Initialize the decoded message as an empty string.
+2. Iterate through",greedy decoding,"highest probability, token",33.33,REVIEW,Decoding Strategies,llama3.2,v0.1
+Q018,What is sampling in text generation?,Sampling selects a token randomly according to its predicted probability distribution.,"Sampling in text generation refers to the process of selecting a subset of text from a larger corpus or dataset to use as a basis for generating new text. This can be done in various ways, such as:
+
+1. **Textual sampling**: Selecting a random or representative subset of text from a corpus to use as a starting point for generating new text.
+2. **Contextual sampling**: Selecting a subset of text that is relevant to the context in which the new text is being generated.
+3",sampling,"token, probability",33.33,REVIEW,Decoding Strategies,llama3.2,v0.1
+Q019,What is temperature in LLMs?,Temperature controls the randomness of token selection during generation.,"In the context of Large Language Models (LLMs), temperature refers to a hyperparameter that controls the output distribution of the model.
+
+In LLMs, the output is typically a probability distribution over a set of possible words or tokens. The temperature parameter is used to control the spread of this distribution. A lower temperature means that the model is more likely to output the most probable word, while a higher temperature means that the model is more likely to output a word that is less probable.
+
+In other words","temperature, token",randomness,66.67,PASS,LLM Generation,llama3.2,v0.1
+Q020,What is top-k sampling?,Top-k sampling selects the next token from the k most probable tokens.,"Top-k sampling is a technique used in data sampling and aggregation, particularly in machine learning and data science. It involves selecting a subset of the most representative or informative data points from a larger dataset, based on a specified ranking or scoring function.
+
+In top-k sampling, the algorithm ranks the data points in descending order based on a scoring function, which can be based on various criteria such as:
+
+1. Frequency or importance
+2. Diversity or uniqueness
+3. Relevance or importance
+4. Unc","top-k, sampling","probable, tokens",50.0,REVIEW,Decoding Strategies,llama3.2,v0.1
+Q021,What is top-p sampling?,Top-p sampling selects from the smallest group of tokens whose cumulative probability reaches p.,"Top-p sampling is a technique used in natural language processing (NLP) and machine learning, particularly in the context of text generation and summarization. It's a method for selecting a subset of the most relevant or informative samples from a larger dataset, often used in applications such as text summarization, question answering, and language modeling.
+
+In top-p sampling, the model is trained to predict the top-p probability distribution over a set of possible samples, where p is a hyperparameter that controls the number","top-p, sampling",cumulative probability,66.67,PASS,Decoding Strategies,llama3.2,v0.1
+Q022,What are embeddings?,Embeddings are numerical vector representations of words or tokens.,"Embeddings are a fundamental concept in natural language processing (NLP) and machine learning. In essence, embeddings are a way to represent words, phrases, or other text elements as numerical vectors in a high-dimensional space.
+
+Imagine you're trying to find the relationship between two words, like ""dog"" and ""bone"". A traditional approach might be to use a dictionary or a thesaurus to find a word that's similar to ""bone"" in meaning. However, this approach can be limited,","embeddings, numerical, vectors",tokens,75.0,PASS,Machine Learning Fundamentals,llama3.2,v0.1
+Q023,What is a token ID?,A token ID is a numerical identifier assigned to a token in a tokenizer vocabulary.,"A token ID (also known as a token address or token contract address) is a unique identifier assigned to a digital token or cryptocurrency on a blockchain network. It is a string of characters that represents the location of a specific token on the blockchain, allowing users to identify, verify, and interact with the token.
+
+Think of a token ID like a unique social security number for a digital token. Just as a social security number identifies an individual, a token ID identifies a specific token on the blockchain.
+
+Token","token ID, identifier","numerical, vocabulary",50.0,REVIEW,Tokenizer Documentation,llama3.2,v0.1
+Q024,What is positional encoding?,Positional encoding provides information about token positions in a sequence.,"Positional Encoding is a technique used in the Transformer architecture, particularly in the self-attention mechanism. It is a way to add a fixed vector to each position in the input sequence, which helps the model to understand the position of the input tokens.
+
+In the Transformer architecture, the self-attention mechanism is used to compute the attention weights between different input tokens. However, the self-attention mechanism only considers the similarity between tokens, not their positions. This can lead to issues, such as:
+
+1","positional encoding, token, positions, sequence",,100.0,PASS,Transformer Architecture,llama3.2,v0.1
+Q025,What are sinusoidal positional encodings?,They use sine and cosine functions to represent token positions.,"Sinusoidal positional encodings are a type of positional encoding used in deep learning models, particularly in the Transformer architecture. They are used to encode the position of each token in a sequence into a numerical vector, which is then used as input to the model.
+
+In traditional positional encodings, the position of each token is encoded as a fixed vector, which can be a one-hot encoding or a learned embedding. However, these methods have limitations, such as:
+
+1. Limited capacity: The fixed vector",sinusoidal,"sine, cosine, positions",25.0,REVIEW,Transformer Architecture,llama3.2,v0.1
+Q026,What is RoPE?,Rotary Position Embedding encodes positional information using rotations in vector representations.,"RoPE (Rape Aggression Defense Education) is a self-defense program designed to teach women how to protect themselves from sexual assault and rape. The program focuses on awareness, assertiveness, and physical self-defense techniques.
+
+The RoPE program was developed in the 1980s by the National Organization for Women (NOW) and the Rape Treatment Center at Santa Monica-UCLA Medical Center. The program is based on the idea that many rapes are committed by someone known to the victim, and that the",RoPE,"Rotary Position Embedding, rotations, vectors",25.0,REVIEW,RoPE Research,llama3.2,v0.1
+Q027,What is a Transformer?,A Transformer is a neural network architecture that uses attention mechanisms to process sequences.,"A transformer is a type of electrical device that plays a crucial role in the transmission and distribution of electrical power. It is a crucial component in the electrical grid, allowing for the efficient transfer of electrical energy from one circuit to another.
+
+A transformer works by using magnetic fields to transfer energy between two or more coils of wire. The primary coil receives electrical energy from a power source, and the secondary coil receives the transformed energy. The transformer uses a magnetic core to concentrate the magnetic field, allowing for a significant",Transformer,"neural network, attention, sequences",25.0,REVIEW,Attention Is All You Need,llama3.2,v0.1
+Q028,What is self-attention?,Self-attention allows each token to consider other tokens in the same sequence.,"Self-attention is a type of attention mechanism used in deep learning models, particularly in the field of natural language processing (NLP) and computer vision. It allows the model to focus on different parts of the input data simultaneously and weigh their importance.
+
+In traditional attention mechanisms, the model focuses on a specific subset of the input data, such as a window of words in a sentence. However, self-attention allows the model to attend to all parts of the input data simultaneously, without the need for",self-attention,"token, sequence",33.33,REVIEW,Transformer Architecture,llama3.2,v0.1
+Q029,What is the difference between BPE and WordPiece?,"Both are subword tokenizers, but BPE merges frequent pairs while WordPiece uses a likelihood-based merging criterion.","BPE (Byte Pair Encoding) and WordPiece are two popular techniques used in natural language processing (NLP) for tokenization and vocabulary creation.
+
+**BPE (Byte Pair Encoding)**
+
+BPE is a method developed by Google for tokenization and vocabulary creation. It's a more advanced technique that takes into account the co-occurrence of words in a corpus. BPE works by iteratively merging the most common pairs of bytes (characters) in the input text until a certain threshold is","BPE, WordPiece, merging",subword,75.0,PASS,Tokenizer Comparison,llama3.2,v0.1
+Q030,Why is tokenization important in LLMs?,"Tokenization converts text into model-readable units and affects context length, processing, and cost.","Tokenization is a crucial step in the development of Large Language Models (LLMs) as it plays a significant role in the processing and understanding of natural language text. Here are some reasons why tokenization is important in LLMs:
+
+1. **Breaking down text into manageable units**: Tokenization involves splitting text into individual words or tokens, which allows the model to process and analyze each word separately. This is essential for understanding the context, syntax, and semantics of the text.
+2. **Pre","tokenization, text, context",cost,75.0,PASS,LLM Fundamentals,llama3.2,v0.1
