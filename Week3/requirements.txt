@@ -1,0 +1,6 @@
+google-genai
+pymongo
+certifi
+pandas
+matplotlib
+python-dotenv
