@@ -1,0 +1,268 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNkKGrSY30A4YSf37DYUck5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/virodulacharishma0506-del/GENAI/blob/main/Week1ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "BDE-M45pKw4l"
+      },
+      "outputs": [],
+      "source": [
+        "!pip install -q google-genai"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import userdata\n",
+        "\n",
+        "api_key = userdata.get(\"GEMINI_API_KEY\")\n",
+        "\n",
+        "if api_key:\n",
+        "    print(\"Gemini API key loaded successfully!\")\n",
+        "else:\n",
+        "    print(\"API key not found!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tVc0hj15MyKz",
+        "outputId": "b1967d5f-bbeb-4c21-fc68-919df564feb5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Gemini API key loaded successfully!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google import genai\n",
+        "\n",
+        "client = genai.Client(api_key=api_key)\n",
+        "\n",
+        "print(\"Gemini client initialized successfully!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YnEoAVWxNChG",
+        "outputId": "154d2d22-5b1a-4f10-a686-d070878e59f3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Gemini client initialized successfully!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google import genai\n",
+        "\n",
+        "client = genai.Client(api_key=\"Gemini_API_Key\")"
+      ],
+      "metadata": {
+        "id": "c5bCNwG_Nwv2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google import genai\n",
+        "from google.colab import userdata\n",
+        "\n",
+        "client = genai.Client(\n",
+        "    api_key=userdata.get('GEMINI_API_KEY')\n",
+        ")"
+      ],
+      "metadata": {
+        "id": "W0qVa5xzOLv2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google import genai\n",
+        "from google.colab import userdata\n",
+        "\n",
+        "api_key = userdata.get(\"GEMINI_API_KEY\")\n",
+        "\n",
+        "client = genai.Client(api_key=api_key)\n",
+        "\n",
+        "print(\"Gemini connected successfully!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YOcTbGjkQdVN",
+        "outputId": "30374a61-c9d2-4475-9845-e7e5b310b36c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Gemini connected successfully!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for model in client.models.list():\n",
+        "    if \"generateContent\" in (model.supported_actions or []):\n",
+        "        print(model.name)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pzN29l-5Rvq5",
+        "outputId": "e0630e93-dcd8-4b10-cca2-7de6d56831fa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "models/gemini-2.5-flash\n",
+            "models/gemini-2.5-pro\n",
+            "models/gemini-2.5-flash-preview-tts\n",
+            "models/gemini-2.5-pro-preview-tts\n",
+            "models/gemma-4-26b-a4b-it\n",
+            "models/gemma-4-31b-it\n",
+            "models/gemini-flash-latest\n",
+            "models/gemini-flash-lite-latest\n",
+            "models/gemini-pro-latest\n",
+            "models/gemini-2.5-flash-lite\n",
+            "models/gemini-2.5-flash-image\n",
+            "models/gemini-3-flash-preview\n",
+            "models/gemini-3.1-pro-preview\n",
+            "models/gemini-3.1-pro-preview-customtools\n",
+            "models/gemini-3.1-flash-lite-preview\n",
+            "models/gemini-3.1-flash-lite\n",
+            "models/gemini-3-pro-image-preview\n",
+            "models/gemini-3-pro-image\n",
+            "models/nano-banana-pro-preview\n",
+            "models/gemini-3.1-flash-image-preview\n",
+            "models/gemini-3.1-flash-image\n",
+            "models/gemini-3.1-flash-lite-image\n",
+            "models/gemini-nano-banana-2.1\n",
+            "models/gemini-3.5-flash\n",
+            "models/gemini-3.5-flash-lite\n",
+            "models/gemini-omni-flash-preview\n",
+            "models/gemini-omni-1.1-flash\n",
+            "models/gemini-omni-1.2-flash\n",
+            "models/gemini-3.5-transcribe\n",
+            "models/gemini-3.6-flash\n",
+            "models/gemini-3.7-flash\n",
+            "models/gemini-3.8-flash\n",
+            "models/gemini-4-argon\n",
+            "models/lyria-3-clip-preview\n",
+            "models/lyria-3-pro-preview\n",
+            "models/lyria-3.5\n",
+            "models/gemini-3.1-flash-tts-preview\n",
+            "models/gemini-3.8-flash-tts\n",
+            "models/gemini-3.8-flash-lite-tts\n",
+            "models/gemini-robotics-er-2-preview\n",
+            "models/gemini-2.5-computer-use-preview-10-2025\n",
+            "models/antigravity-preview-05-2026\n",
+            "models/antigravity-preview-09-2026\n",
+            "models/antigravity-preview-latest\n",
+            "models/deep-research-max-preview-04-2026\n",
+            "models/deep-research-preview-04-2026\n",
+            "models/deep-research-pro-preview-12-2025\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google import genai\n",
+        "from google.genai import types\n",
+        "from google.colab import userdata\n",
+        "\n",
+        "client = genai.Client(\n",
+        "    api_key=userdata.get(\"GEMINI_API_KEY\"),\n",
+        "    http_options=types.HttpOptions(timeout=30000)\n",
+        ")\n",
+        "\n",
+        "response = client.models.generate_content(\n",
+        "    model=\"gemini-3.5-flash-lite\",\n",
+        "    contents=\"Explain Artificial Intelligence in 3 simple sentences.\",\n",
+        "    config=types.GenerateContentConfig(\n",
+        "        max_output_tokens=100\n",
+        "    )\n",
+        ")\n",
+        "\n",
+        "print(response.text)"
+      ],
+      "metadata": {
+        "id": "-weasmYkR6Gz",
+        "outputId": "fcb82fcc-0739-4bc2-f826-2e4dca74d76b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Artificial Intelligence, or AI, is a technology that allows computers and machines to mimic human learning, reasoning, and problem-solving. It works by processing massive amounts of data to recognize patterns and make decisions. Ultimately, AI is designed to help us automate complex tasks and make our lives easier.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
